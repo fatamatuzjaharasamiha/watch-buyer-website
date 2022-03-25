@@ -3,8 +3,9 @@ import { Button, Card } from 'react-bootstrap';
 import './Watch.css'
 import { BsCartCheck } from 'react-icons/bs'
 const Watch = (props) => {
-    console.log(props.watch)
-    const { picture, name, price } = props.watch
+    // console.log(props)
+    const { watch, handleAddCart } = props
+    const { picture, name, price } = watch
     return (
         <div className='watch col-4'>
             <Card className='mt-5 shadow-lg'>
@@ -16,10 +17,10 @@ const Watch = (props) => {
                     <Card.Text>
                         price:{price}
                     </Card.Text>
-                    <Button variant="dark">
-                        <div className='d-flex fw-bold'>
-                            <p className='fs-6 mt-1'>Add To Cart</p>
-                            <BsCartCheck className='m-2'></BsCartCheck>
+                    <Button variant="dark" onClick={() => handleAddCart(watch)}>
+                        <div className='fw-bold'>
+                            Add To Cart
+                            <BsCartCheck className='ms-2'></BsCartCheck>
                         </div>
                     </Button>
                 </Card.Body>

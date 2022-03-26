@@ -6,6 +6,7 @@ const Shop = () => {
     const [watches, setWatches] = useState([])
     // console.log(watches)
     const [cart, setCart] = useState([])
+    const [randomWatch, setRandomWatch]=useState([])
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
@@ -18,8 +19,13 @@ const Shop = () => {
     }
     const handleRemoveCart = () => {
         console.log('clicked')
-         const remove = []
-         setCart(remove)
+        const remove = []
+        setCart(remove)
+    }
+    const randomSelect = (cart) => {
+        const random = Math.floor(Math.random() * cart.length)
+        const randomAdd = (cart[random])
+        setRandomWatch(randomAdd)
     }
     return (
         <div className='shopping-container row container mx-auto'>
@@ -35,6 +41,8 @@ const Shop = () => {
             <div className="cart-container col-3">
                 <Cart cart={cart}
                     handleRemoveCart={handleRemoveCart}
+                    randomSelect={randomSelect}
+                    randomWatch ={randomWatch}
                 ></Cart>
             </div>
         </div>

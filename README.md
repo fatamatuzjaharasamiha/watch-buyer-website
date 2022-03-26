@@ -1,7 +1,6 @@
 # Getting Started with Create React App
 # Project Name : react-assignment
-## Livesite link:  
-## [Visit website](https://heroic-parfait-10d6fe.netlify.app/)
+## Livesite link: [Visit website](https://heroic-parfait-10d6fe.netlify.app/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

@@ -7,7 +7,7 @@ const Watch = (props) => {
     const { watch, handleAddCart } = props
     const { picture, name, price } = watch
     return (
-        <div className='watch col-4'>
+        <div className='watch col-lg-4 col-sm-12'>
             <Card className='mt-5 shadow-lg'>
                 <div className='d-flex justify-content-center'>
                     <Card.Img className='card-img' variant="top" src={picture} />
@@ -15,9 +15,9 @@ const Watch = (props) => {
                 <Card.Body>
                     <Card.Title>Name : {name}</Card.Title>
                     <Card.Text>
-                        price:{price}
+                        Price:${price}
                     </Card.Text>
-                    <Button variant="dark" onClick={() => handleAddCart(watch)}>
+                    <Button className='rounded-pill' variant="dark" onClick={() => handleAddCart(watch)}>
                         <div className='fw-bold'>
                             Add To Cart
                             <BsCartCheck className='ms-2'></BsCartCheck>

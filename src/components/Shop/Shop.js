@@ -16,6 +16,11 @@ const Shop = () => {
         const newCart = [...cart, watch]
         setCart(newCart)
     }
+    const handleRemoveCart = () => {
+        console.log('clicked')
+         const remove = []
+         setCart(remove)
+    }
     return (
         <div className='shopping-container row container mx-auto'>
             <div className='col-9'>
@@ -28,7 +33,9 @@ const Shop = () => {
                 </div>
             </div>
             <div className="cart-container col-3">
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart}
+                    handleRemoveCart={handleRemoveCart}
+                ></Cart>
             </div>
         </div>
     );

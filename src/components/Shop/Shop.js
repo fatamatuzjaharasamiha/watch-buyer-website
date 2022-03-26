@@ -6,7 +6,7 @@ const Shop = () => {
     const [watches, setWatches] = useState([])
     // console.log(watches)
     const [cart, setCart] = useState([])
-    const [randomWatch, setRandomWatch]=useState([])
+    const [randomWatch, setRandomWatch] = useState([])
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
@@ -42,11 +42,10 @@ const Shop = () => {
                 <Cart cart={cart}
                     handleRemoveCart={handleRemoveCart}
                     randomSelect={randomSelect}
-                    randomWatch ={randomWatch}
+                    randomWatch={randomWatch}
                 ></Cart>
             </div>
         </div>
     );
 };
-
 export default Shop;
